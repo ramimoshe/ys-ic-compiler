@@ -10,14 +10,14 @@ public class Token extends Symbol {
     private int line;    
     public Token(int id, int line) {
         // call super constructor for Symbol(int sym_num,int l,int r)
+    	super(id, ++line, 0);
     	this.line=line;
-        super(id, ++this.line, 0);
     }
     
     public Token(int id, int line, Object value){
         // call super constructor for Symbol(int sym_num,int l,int r,Object value)
+    	super(id, ++line, 0, value);
     	this.line=line;
-    	super(id, ++this.line, 0, value);
     }
     
     public String toString(){
